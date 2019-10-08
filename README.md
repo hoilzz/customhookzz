@@ -1,44 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# custom-hook-zz
 
-## Available Scripts
+작업하면서 사용한 커스텀 훅
 
-In the project directory, you can run:
+## react-hooks-testing-library
 
-### `npm start`
+### renderHook
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```js
+function renderHook(
+  callback: function(props?: any): any,
+  options?: RenderHookOptions
+): RenderHookResult
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+제공된 `callback`을 every render마다 호출하는 테스트용 컴포넌트를 렌더한다. 콜백은 hook을 전달해도 된다.
 
-### `npm test`
+**callback**
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 만약 new props이 rerender call에서 제공되지 않는다면 콜백에 전달된 `props`는 `options`의 `initialProps`이다.
 
-### `npm run build`
+**rederHook Result 객체**
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+renderHook의 반환값 인터페이스
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```js
+export interface HookResult<R> {
+  readonly current: R;
+  readonly error: Error;
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export interface RenderHookResult<P, R> {
+  readonly result: HookResult<R>;
+  readonly waitForNextUpdate: () => Promise<void>;
+  readonly unmount: () => boolean;
+  readonly rerender: (newProps?: P) => void;
+}
+```
 
-### `npm run eject`
+```js
+{
+  current: any,
+  error: Error
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`current` 값 or `result`는 `renderHook`에 전달된 콜백에서 반환 된 모든 내용을 반영한다. thrown value는 error 값에 반영된다.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**rerender**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```js
+function rerender(newProps? : any): void
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+hook을 재연산 시키고, 테스트 컴포넌트를 리렌더한다. 만약 `newProps`가 전달된다면, `callback`에 전달된 `initialProps`을 대체할 것이다.
