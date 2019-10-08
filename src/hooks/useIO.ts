@@ -12,7 +12,6 @@ type IOptions = {
 };
 
 /**
- *
  * @param cb
  * @param options
  */
