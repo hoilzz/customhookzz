@@ -2,10 +2,10 @@ import { useCallback, useEffect, useRef } from 'react';
 
 type ICallback = (e: MouseEvent) => void;
 
-const useOutsideClick = (callback: ICallback) => {
-  const ref = useRef<HTMLElement>(null);
+const useOutsideClick = <D extends HTMLElement>(callback: ICallback) => {
+  const ref = useRef<D>(null);
 
-  const handler = useCallback(
+  const onClick = useCallback(
     e => {
       if (ref.current && !ref.current.contains(e.target)) {
         callback(e);
@@ -15,9 +15,9 @@ const useOutsideClick = (callback: ICallback) => {
   );
 
   useEffect(() => {
-    window.addEventListener('click', handler);
-    return () => window.removeEventListener('click', handler);
-  }, [handler]);
+    window.addEventListener('click', onClick);
+    return () => window.removeEventListener('click', onClick);
+  }, [onClick]);
 
   return ref;
 };
