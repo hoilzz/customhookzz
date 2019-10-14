@@ -2,6 +2,17 @@
 
 작업하면서 사용한 커스텀 훅
 
+## todo
+
+- storybook으로 demo 및 docs 보여주기
+- 빌드 어케할지
+  - 후보 1. webpack이나 rollup
+  - 후보 2. 간단하게(?) [microbundle](https://github.com/developit/microbundle)
+- lint
+- test
+
+요거 다 되면 CRA 관련 다 지우고, 다시 셋업.
+
 ## react-hooks-testing-library
 
 ### renderHook
