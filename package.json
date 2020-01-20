@@ -7,6 +7,12 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@storybook/addon-actions": "^5.3.7",
+    "@storybook/addon-links": "^5.3.7",
+    "@storybook/addons": "^5.3.7",
+    "@storybook/preset-typescript": "^1.2.0",
+    "@storybook/react": "^5.3.7",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/react-hooks": "^3.2.1",
@@ -18,15 +24,21 @@
     "@typescript-eslint/eslint-plugin": "2.x",
     "@typescript-eslint/parser": "2.x",
     "babel-eslint": "10.x",
+    "babel-loader": "^8.0.6",
     "eslint": "6.x",
     "eslint-config-react-app": "^5.1.0",
     "eslint-plugin-import": "2.x",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "^2.3.0",
     "jest": "^24.9.0",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.7.4"
   },
-  "scripts": {},
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
