@@ -27,7 +27,7 @@ const useIO = (cb: IOCallback, options?: IOptions) => {
   return {
     io,
     observe,
-    unobserve,
+    unobserve
   };
 };
 

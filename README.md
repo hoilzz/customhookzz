@@ -4,14 +4,11 @@
 
 ## todo
 
-- storybook으로 demo 및 docs 보여주기
-- 빌드 어케할지
-  - 후보 1. webpack이나 rollup
-  - 후보 2. 간단하게(?) [microbundle](https://github.com/developit/microbundle)
-- lint
-- test
-
-요거 다 되면 CRA 관련 다 지우고, 다시 셋업.
+- [ ] 스토리북을 통한 개발환경
+- [x] Lint (ES, TS)
+  - [ ] 굳이 react-app-config를 이용할 필요가 있을까? 어차피 hook만 체크할건데..
+- [ ] test 환경 구축
+- [ ] rollup을 통한 빌드]
 
 ## react-hooks-testing-library
 
