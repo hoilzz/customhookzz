@@ -1,25 +1,26 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": true,
+    // false로 하면, createElement를 못찾는다. 리액트가 cjs 모듈로 되어있는데 이 플래그를 통해 es6 모듈로 import 가능.
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    // 파일명에 대소문자 구분하지 않아도 되는 기능
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    // 결과파일을 저장하지 않음. 얘를 true하면 왜 Module build failed. no output 이라 뜨는지 모르겠다.
+    "noEmit": false,
+    "jsx": "react",
+    // 런타임에서 프로젝트 구조를 나타내는 root folder 리스트.
+    "rootDirs": ["src", "stories"],
+    "baseUrl": "src",
+    // experimental decorator 활성화하기
+    "experimentalDecorators": true
   },
-  "include": [
-    "src"
-  ]
+  // "include": ["src/**/*", "stories/@types"],
+  "exclude": ["node_modules", "build"]
 }

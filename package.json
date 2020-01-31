@@ -2,21 +2,42 @@
   "name": "katalk-novel-back-office",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@storybook/addon-actions": "^5.3.7",
+    "@storybook/addon-docs": "^5.3.9",
+    "@storybook/addon-links": "^5.3.7",
+    "@storybook/addons": "^5.3.7",
+    "@storybook/preset-typescript": "^1.2.0",
+    "@storybook/react": "^5.3.7",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.2.1",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.9.0",
     "@types/node": "^13.1.7",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "babel-eslint": "10.x",
+    "babel-loader": "^8.0.6",
+    "eslint": "6.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "jest": "^24.9.0",
+    "react": "^16.12.0",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "react-dom": "^16.12.0",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.7.4"
   },
-  "scripts": {},
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

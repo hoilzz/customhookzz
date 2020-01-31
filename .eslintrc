@@ -1,0 +1,18 @@
+{
+  "extends": [
+    // not all eslint core rules are compatible with ts
+    // following config adjust the one from eslint appropriately for ts
+    // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#recommended-configs
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  "env": {"jest"},
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react-hooks"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off"
+  }
+}
