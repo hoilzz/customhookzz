@@ -5,9 +5,9 @@
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#recommended-configs
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "env": {"jest"},
+  "env": { "jest": true },
   "parser": "@typescript-eslint/parser",
   "plugins": ["react-hooks"],
   "rules": {

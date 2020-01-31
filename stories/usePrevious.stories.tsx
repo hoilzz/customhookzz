@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import usePrevious from '../src/hooks/usePrevious';
-// import mdx from './usePrevious.stories.mdx';
+import mdx from './usePrevious.mdx';
 
 export const Example = () => {
   const [count, setCount] = useState(0);
@@ -19,11 +19,11 @@ export const Example = () => {
 
 export default {
   title: 'usePrevious',
-  component: Example
-  // parameters: {
-  //   componentSubtitle: 'asd',
-  //   docs: {
-  //     page: mdx
-  //   }
-  // }
+  component: Example,
+  parameters: {
+    componentSubtitle: 'asd',
+    docs: {
+      page: mdx
+    }
+  }
 };

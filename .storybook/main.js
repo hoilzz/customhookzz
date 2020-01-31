@@ -5,7 +5,7 @@ module.exports = {
     '@storybook/addon-actions',
     '@storybook/addon-links',
     // docs 탭 생성, props table
-    '@storybook/addon-docs'
+    '@storybook/addon-docs/react/preset'
   ],
   webpackFinal: async config => {
     config.module.rules.push({

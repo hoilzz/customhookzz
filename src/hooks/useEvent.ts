@@ -13,7 +13,7 @@ const useEvent = (
   target: RefObject<HTMLElement>,
   eventType: string,
   eventFn: EventFunction,
-  watch: any[] = []
+  deps: any[] = []
 ) => {
   useLayoutEffect(() => {
     if (target.current) {
@@ -24,7 +24,7 @@ const useEvent = (
         target.current.removeEventListener(eventType, eventFn);
       }
     };
-  }, watch);
+  }, deps);
 };
 
 export default useEvent;

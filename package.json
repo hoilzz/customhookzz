@@ -2,9 +2,13 @@
   "name": "katalk-novel-back-office",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "@babel/preset-typescript": "^7.8.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
     "@storybook/addon-actions": "^5.3.7",
     "@storybook/addon-docs": "^5.3.9",
     "@storybook/addon-links": "^5.3.7",
@@ -27,16 +31,19 @@
     "eslint-plugin-import": "2.x",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "^2.3.0",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "react": "^16.12.0",
     "react-docgen-typescript-loader": "^3.6.0",
     "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.4"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "browserslist": {
     "production": [

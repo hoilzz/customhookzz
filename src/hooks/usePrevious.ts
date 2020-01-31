@@ -2,12 +2,12 @@ import { useEffect, useRef } from 'react';
 
 /**
  * 이전 props이나 state를 가져오고 싶을 때.
+ * @param value
  */
-
-function usePrevious(value: any) {
+function usePrevious<T>(value: T): T | undefined {
   // The ref object is a generic container whose current property is mutable ...
   // ... and can hold any value, similar to an instance property on a class
-  const ref = useRef(value);
+  const ref = useRef<T>();
 
   // Store current value in ref
   useEffect(() => {
