@@ -1,9 +1,11 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.tsx'],
+  stories: ['../stories/**/*.stories.(tsx|mdx)'],
   addons: [
     '@storybook/preset-typescript',
     '@storybook/addon-actions',
-    '@storybook/addon-links'
+    '@storybook/addon-links',
+    // docs 탭 생성, props table
+    '@storybook/addon-docs'
   ],
   webpackFinal: async config => {
     config.module.rules.push({
@@ -13,7 +15,7 @@ module.exports = {
           loader: require.resolve('ts-loader')
         },
         {
-          loader: require.resolve('react-docgen-typescript-loader')
+          loader: 'react-docgen-typescript-loader'
         }
       ]
     });

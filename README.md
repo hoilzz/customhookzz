@@ -61,3 +61,9 @@ function rerender(newProps? : any): void
 ```
 
 hook을 재연산 시키고, 테스트 컴포넌트를 리렌더한다. 만약 `newProps`가 전달된다면, `callback`에 전달된 `initialProps`을 대체할 것이다.
+
+## Docs
+
+DocsPage는 컴포넌트 스토리에 대한 제로 컨피그, docgen comments, props table을 깔끔하게 보여줌
+
+MDX. 긴 형식의 마크다운 문서 스토리를 하나의 파일로 작성가능.

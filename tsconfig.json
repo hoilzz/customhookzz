@@ -21,6 +21,6 @@
     // experimental decorator 활성화하기
     "experimentalDecorators": true
   },
-  "include": ["src/**/*"],
+  // "include": ["src/**/*", "stories/@types"],
   "exclude": ["node_modules", "build"]
 }
