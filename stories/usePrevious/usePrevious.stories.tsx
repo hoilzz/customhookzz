@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import usePrevious from '../src/hooks/usePrevious';
+import usePrevious from 'src/hooks/usePrevious';
 import mdx from './usePrevious.mdx';
 
 export const Example = () => {

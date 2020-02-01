@@ -1,6 +1,6 @@
 import { Reducer, useReducer } from 'react';
 
-type ISetState<D> = Partial<D> | ((prevState: D) => D);
+type ISetState<S> = Partial<S> | ((prevState: S) => S);
 
 const useSetState = <T>(initialState: T) =>
   useReducer<Reducer<T, ISetState<T>>>(

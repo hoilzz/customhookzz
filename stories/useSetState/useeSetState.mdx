@@ -1,0 +1,23 @@
+# useSetState
+
+useState의 두 번째 반환 값은 상태를 업데이트할 수 있는 함수다.
+
+이 함수는 class comoponent의 setState처럼 이전 값을 인자로 제공하는 함수를 통해 업데이트할 수 있다.
+
+하지만, class component의 setState와 다른점은 state 갱신할 때, merge 하는 것이 아닌 replace하는 점이다. 그래서 상태 업데이트 할 때, 변경하는 값 외에 이전상태와 함께 전달해줘야하는 귀찮음이 있다.
+
+```js
+function FunctionalComponent() {
+  const [state, setState] = useState({
+    name: '',
+    age: 50
+  });
+
+  setState({
+    // ...state,
+    name: 'hoilzz'
+  }); // merge가 아닌 replace이기 때문에.. age도 전달해줘야 한다.
+}
+```
+
+useReducer(useState도 가능) 훅을 통해 class component의 setState를 구현했다.

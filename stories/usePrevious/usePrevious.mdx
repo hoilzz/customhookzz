@@ -1,0 +1,11 @@
+# usePrevious
+
+[이전 props와 state 가져오기](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state)
+
+클래스 컴포넌트에서는 componnentDidUpdate 메서드에서 이전 prop과 state를 인자로 받을 수 있었다.
+
+근데 함수형 컴포넌트에서는 CDU처럼 이전 값을 제공해주는 라이프사이클이 없다.
+
+useRef hook을 통해 이전 값을 저장하는데 사용할 수 있다.
+
+해당 hook을 통해 usePrevious hook을 만들 수 있다.

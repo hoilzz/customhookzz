@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   stories: ['../stories/**/*.stories.(tsx|mdx)'],
   addons: [
@@ -20,6 +22,10 @@ module.exports = {
       ]
     });
     config.resolve.extensions.push('.ts', '.tsx');
+    config.resolve.alias = {
+      src: path.resolve(__dirname, '../src'),
+      stories: path.resolve(__dirname, 'stories')
+    };
     return config;
   }
 };
