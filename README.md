@@ -4,11 +4,12 @@
 
 ## todo
 
-- [ ] 스토리북을 통한 개발환경
+- [x] 스토리북을 통한 개발환경
 - [x] Lint (ES, TS)
-  - [ ] 굳이 react-app-config를 이용할 필요가 있을까? 어차피 hook만 체크할건데..
-- [ ] test 환경 구축
-- [ ] rollup을 통한 빌드]
+  - [x] 굳이 react-app-config를 이용할 필요가 있을까? 어차피 hook만 체크할건데.. -> 걍 eslint, ts recommend로 함
+- [x] test 환경 구축
+- [ ] 스토리북 컴파일러 ts-loader인데, 걍 babel로 통일하자.
+- [ ] rollup을 통한 빌드
 
 ## react-hooks-testing-library
 
