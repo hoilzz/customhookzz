@@ -1,5 +1,6 @@
 import React from 'react';
 import useSetState from 'src/hooks/useSetState';
+import mdx from './useSetState.mdx'
 
 const defaultState = {
   age: 0,
@@ -37,5 +38,10 @@ export const Example = () => {
 
 export default {
   title: 'useSetState',
-  component: Example
+  component: Example,
+  parameters: {
+    docs: {
+      page: mdx
+    }
+  }
 };

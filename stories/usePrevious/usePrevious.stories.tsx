@@ -21,7 +21,6 @@ export default {
   title: 'usePrevious',
   component: Example,
   parameters: {
-    componentSubtitle: 'asd',
     docs: {
       page: mdx
     }
